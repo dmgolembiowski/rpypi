@@ -31,7 +31,14 @@ from matplotlib import *
 ```
 
 > _Great, but why?_
-I've been hacking on Raspberry Pi's for a long while now, and one of the most obnoxious things I experience is `ImportError` or `ModuleNotFound`. Instead, going forward I don't want to have to think about setting up an RPi's Python packages when I could install just one and never have to deal with the issue again. 
+
+I've been hacking on Raspberry Pi's for a long while now, and one of the most obnoxious things I experience is `ImportError` or `ModuleNotFound`. 
+
+Instead, going forward I don't want to have to think about setting up an RPi's Python packages when I could install just one and never have to deal with the issue again. 
 Moreover, this solution scales incredibly well when you can serve various different architectures, versions, and dynamically-linked modules when you can guarantee the CPU's will match the remote. 
 This is where Rust comes in -- we would like to be able to serve on-demand modules that work across multiple versions and CPU architectures. 
 To do this a few things are required: (1) hacking the system importer; (2) a file server; (3) a thicc disk; (4) some Monster energy drinks and a dream. 
+
+> _What else can you do after this is in place?_
+
+I'm glad you asked -- the most incredible RPC system you've never seen.
