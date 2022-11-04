@@ -6,4 +6,10 @@ edition = "2021"
 maintainers = ["David Golembiowski <dmgolembiowski@gmail.com>"]
 repository = "https://github.com/dmgolembiowski/rpypi.git"
 
+[lib]
+name = "rpypi"
+crate-type = ["cdylib"]
+
 [dependencies]
+pyo3 = { version = "0.17.3", features = ["full", "extension-module", "generate-import-lib", "nightly", "inventory", "macros", "multiple-pymethods", "auto-initialize", "abi3-py39", "abi3-py310"] }
+
