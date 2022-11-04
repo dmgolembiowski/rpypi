@@ -21,10 +21,10 @@ class InstalledMetaCache:
         """
         if preset is not None:
             try:
-                assert(isinstance(preset, Map
+                assert(isinstance(preset, Map)
             self.inner = preset
         else:
-            self.i
+            self.inner = Map()
         self.locked = False
 
     @contextmanager
@@ -34,10 +34,14 @@ class InstalledMetaCache:
         # pre-2) If already configured, check for reachability
         # pre-3) Raise any connection errors
         # pre-4) Tell rpypi-server to persist the socket 
-        return self
+        # 1) Start an immutables mutation transaction
+        try:
+            pass
+        finally:
+            return self
 
     def __exit__(self):
-        # Release the underlying rust unix socket connection
+        # End the mutation transaction
         return self
 
 # ToDo:
