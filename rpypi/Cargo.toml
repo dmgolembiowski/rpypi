@@ -6,6 +6,9 @@ edition = "2021"
 maintainers = ["David Golembiowski <dmgolembiowski@gmail.com>"]
 repository = "https://github.com/dmgolembiowski/rpypi.git"
 
+[toolchain]
+channel = "nightly"
+
 [lib]
 name = "rpypi"
 crate-type = ["cdylib"]
