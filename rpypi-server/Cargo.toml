@@ -1,0 +1,9 @@
+[package]
+name = "rpypi-server"
+description = "Raspberry Pypi — use packages without the excessive disk saturation"
+version = "0.0.0-alpha"
+edition = "2021"
+maintainers = ["David Golembiowski <dmgolembiowski@gmail.com>"]
+repository = "https://github.com/dmgolembiowski/rpypi.git"
+
+[dependencies]
